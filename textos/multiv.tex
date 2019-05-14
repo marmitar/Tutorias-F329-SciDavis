@@ -1,0 +1,110 @@
+\edef\indentacao{\the\parindent}
+
+\noindent
+\begin{minipage}[t]{0.55\textwidth}\setlength{\parindent}{\indentacao}
+
+    Para os casos em que é necessário apresentar dados com mais de uma váriavel dependente de um mesmo dado \texttt{X}, existe a opção de gráficos múltiplos. Eles servem para comparar as relações do tipo $y_1 = f(x)$ e $y_2 = g(x)$, quando $x$, $y_1$ e $y_2$ são medidos em conjunto.
+
+    Em experimentos com circuitos, esse tipo de dado aparece, por exemplo, na medição de tensão em nós diferentes para a comparação de seus comportamentos no tempo. É o caso do circuito da figura \ref{fig:multiv:circuito}, cujos dados foram colocados como na figura \ref{fig:multiv:dados}.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{multiv/1dados.png}
+
+        \caption{Dados gerados com simulador}
+        \label{fig:multiv:dados}
+    \end{figure}
+
+\end{minipage}\vspace{0.05\textwidth}%
+\begin{minipage}[t]{0.4\textwidth}
+    \begin{figure}[H]
+        \centering
+        \input{recursos/multiv/circ}
+
+        \caption{Circuito de defasagem da tensão por um capacitor}
+        \label{fig:multiv:circuito}
+    \end{figure}
+\end{minipage}
+
+
+\subsection{Gráficos de Eixos Separados}
+
+    Uma opção para mostrar os dois canais ao mesmo tempo é colocar cada um em seu próprio gŕafico com seus próprios eixos. No \texttt{Origin}, isso é feito como na figura \ref{fig:multiv:paneis:tutorial}, mas pode ser feito em duas imagens separadas também. O problema com essa abordagem é que as escalas diferentes não mostram muito bem as proporções entre os canais de entrada e saída.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{multiv/2paneis.png}
+
+        \caption{Criando os gráficos separados}
+        \label{fig:multiv:paneis:tutorial}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{multiv/3paneis.pdf}
+
+        \caption{Gráficos das tensões de entrada e saída do circuito}
+        \label{fig:multiv:paneis}
+    \end{figure}
+
+
+\subsection{Gráficos de Eixos em Conjunto}
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.6\textwidth]{multiv/4dois.png}
+
+        \caption{Criando o gráfico com as duas curvas}
+        \label{fig:multiv:juntos:tutorial}
+    \end{figure}
+
+    \noindent
+    \begin{minipage}[t]{0.35\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{multiv/5dois.png}
+
+            \caption{Formatação do rótulo dos eixos}
+            \label{fig:multiv:juntos:formatacao}
+        \end{figure}
+    \end{minipage}\hspace{0.05\textwidth}%
+    \begin{minipage}[t]{0.6\textwidth}\setlength{\parindent}{\indentacao}
+
+        Quando o gráfico é criado como na figura \ref{fig:multiv:juntos:tutorial}, o que rótulo do eixo $y$ fica como o nome de apenas uma das colunas dos dados. Pra consertar isso basta alterar o nome do eixo para algum texto que descreve ambas variáveis (figura \ref{fig:multiv:juntos:formatacao}).
+
+        Um dos maiores limites para esse método é que as variáveis dependentes precisam ter a mesma motivação física e, por causa disso, a mesma gradeza, caso contrário, o eixo compartilhado entre elas perde completamente o sentido.
+
+    \end{minipage}
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.8\textwidth]{multiv/6dois.pdf}
+
+        \caption{Gráfico das tensões $V_1$ e $V_2$ do circuito}
+        \label{fig:multiv:juntos}
+    \end{figure}
+
+
+\subsection{Gráficos com Apenas a Abscissa Comum}
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.6\textwidth]{multiv/7duplo.png}
+
+        \caption{Criando o gráfico com três eixos}
+        \label{fig:multiv:duplo:tutorial}
+    \end{figure}
+
+    Imagine agora o caso em que queremos mostrar a defasagem entre a corrente a tensão no capacitor da figura \ref{fig:multiv:circuito}. A única grandeza comum agora é o tempo, então vamos precisar de gráficos de três eixos. No \texttt{Origin}, isso é feito como mostra a imagem \ref{fig:multiv:duplo:tutorial}. Normalmente, é melhor alterar as cores para melhor representar cada dado.
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.8\textwidth]{multiv/8duplo.pdf}
+
+        \caption{Gráfico de corrente e tensão em um capacitor por tempo}
+        \label{fig:multiv:duplo}
+    \end{figure}
+
+    \begin{nota}
+        As vezes, os gráficos com múltiplas curvas podem ficar sobrecarregado de informação. Quando isso acontece, o melhor é separar os dados em gráficos distintos pra manter a legibilidade. Gráficos de três eixos pdem ficar complicados com facilidade.
+    \end{nota}

@@ -1,8 +1,8 @@
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{basico/1mostra.png}
+    \includegraphics[width=0.6\textwidth]{basico/1mostra.png}
 
-    \caption{Tela inicial do SciDavis}
+    \caption{Tela inicial do \software}
     \label{fig:basico:mostragem}
 \end{figure}
 
@@ -33,42 +33,38 @@
 %     \end{figure}
 
 
-\subsection{Importando os Dados}
+\subsection{Importando os Dados} \label{sec:basico:import}
 
-    Os dados podem ser apenas copiados de um gerenciador de tabelas como o \texttt{Excel}, o \texttt{Google Planilhas} ou o \\\texttt{LibreOffice Calc} e colados na tabela do \texttt{Origin}. Quando os dados são importados assim, a formatação das linhas e colunas se matém.
-
-    Também é possível importar dados de arquivos de texto, como os arquivos com extensão \texttt{.csv} ou planilhas salvas do \texttt{Excel}, apesar de ser um pouco mais complicado. Versões mais recentes do programa fornecem até a opção de pegar dados de páginas da \textit{internet}.
+    Assim como no \texttt{Origin}, o \software tem um gerenciador de tabelas prórpio, apesar de simplificado, onde os dados podem ser apenas copiados e colados de outra tabela do \texttt{Excel}, \texttt{Google Planilhas}, \texttt{LibreOffice Calc} ou outra ferramenta do tipo. Quando os dados são importados assim, a formatação das linhas e colunas se matém. Outra opção é importar de arquivos de texto de campos separados, como o \texttt{CSV} e suas variações.
 
     \begin{lembrete}
-        Cuidado com o separador decimal. Em português e outras línguas europeias é mais comum encontrar a vírgula [\texttt{,}] como separador da parte decimal do número, enquanto nos países anglofônicos é o ponto final [\texttt{.}] que define a parte fracionária e a vírgula serve para separar os milhares. Isso pode trazer problemas na hora de importar os dados, dependendo da configuração do \texttt{Origin} e da formatação original dos dados.
+        Cuidado com o separador decimal. Em português e outras línguas europeias é mais comum encontrar a vírgula [\texttt{,}] como separador da parte decimal do número, enquanto nos países anglofônicos é o ponto final [\texttt{.}] que define a parte fracionária e a vírgula serve para separar os milhares. Dependendo da configuração do \software e da formatação original dos dados, isso pode causar problemas de importação e os dados serão tratados como tipo \texttt{Text}.
     \end{lembrete}
 
 
-\subsection{Renomeando Colunas} \label{sec:basico:renome}
+\subsection{Configurando as Colunas} \label{sec:basico:renome}
 
-    Por padrão, as colunas são criadas com letras (figura \ref{fig:basico:importado}). Para mudar isso, basta alterar as propriedades da coluna (acessada com um clique duplo na coluna), como na figura \ref{fig:basico:renomear}. Os campos mais importantes são:
+    Por padrão, as colunas são criadas com letras com números. Para mudar isso, basta alterar as propriedades da coluna, que fica na parte direita da janela da tabela, como na figura \ref{fig:basico:colnome}. Além disso, se você importar os dados de um arquivo \texttt{.csv}, é possível utilizar a primeira linha como nome da coluna, o \textit{header}.
 
-    \begin{description}
-        \item[Short Name] o nome da coluna na tabela do \texttt{Origin}
-        \item[Long Name] um nome mais descritivo para o valor e é o que normalmente aparece no gráfico
-        \item[Units] a gradeza física do valor
-        \item[Plot Designation] é a função da coluna no gráfico, que pode ser \texttt{Y}, \texttt{X}, \texttt{YErr}, \texttt{Z}, entre outros...
-    \end{description}
-
-    Além disso, se você importar os dados de um arquivo \texttt{CSV}, é possível utilizar as primeiras linhas como nome ou descrição da coluna.
+    Outra coisa importante é o tipo de dado da coluna. Para a construção dos gráficos, o desejado normalmente são dados de tipos numéricos ou, às vezes, datas. Porém, é possível que os dados estejam sendo tratados como texto, como no problema descrito na seção \nameref{sec:basico:import}. Por isso, deve se ter o cuidado de escolher o tipo certo, seguindo a figura \ref{fig:basico:coltipo}, antes e depois de importar os valores.
 
     \begin{figure}[htbp]
+        \begin{subfigure}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{basico/3colnome.png}
+
+            \caption{Nome da coluna}
+            \label{fig:basico:colnome}
+        \end{subfigure}
+        ~
         \centering
-        \includegraphics[width=0.7\textwidth]{basico/4import.png}
+        \begin{subfigure}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{basico/2coltype.png}
 
-        \caption{Colunas com nomes genérico}
-        \label{fig:basico:importado}
-    \end{figure}
-
-    \begin{figure}[htbp]
-        \centering
-        \includegraphics[width=0.8\textwidth]{basico/5renome.png}
-
-        \caption{Alterando as propriedades da coluna}
-        \label{fig:basico:renomear}
+            \caption{Tipo dos dados da coluna}
+            \label{fig:basico:coltipo}
+        \end{subfigure}
+        \caption{Configuração da coluna selecionada}
+        \label{fig:basico:config}
     \end{figure}

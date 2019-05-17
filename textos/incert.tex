@@ -1,26 +1,13 @@
-Como exemplo para a aplicação de barras de incerteza, continuaremos com os mesmo dados da seção \nameref{sec:reta}, porém agora com as incertezas associadas a cada medida, que, foram criadas, novamente, com o auxílio de um computador.
+Como exemplo para a aplicação de barras de incerteza, continuaremos com os mesmo dados da seção \nameref{sec:reta}, porém agora com as incertezas associadas a cada medida, que foram criadas, novamente, com o auxílio de um computador, que podem ser vistos na figura \ref{fig:incert:dados}.
 
 
 \subsection{Adicionando Colunas}
 
     \begin{figure}[htbp]
         \centering
-        \begin{subfigure}{0.27\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{incert/1insert.png}
+        \includegraphics[width=0.4\textwidth]{incert/1insert.png}
 
-            \caption{Inserindo novas colunas}
-            \label{fig:incert:insert}
-        \end{subfigure}
-        ~
-        \begin{subfigure}{0.35\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{incert/2move.png}
-
-            \caption{Mudando a posição das colunas}
-            \label{fig:incert:mover}
-        \end{subfigure}
-        \caption{Criando novas colunas}
+        \caption{Inserindo novas colunas}
         \label{fig:incert:colunas}
     \end{figure}
 
@@ -28,7 +15,7 @@ Como exemplo para a aplicação de barras de incerteza, continuaremos com os mes
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.7\textwidth]{incert/3dados.png}
+        \includegraphics[width=0.5\textwidth]{incert/2dados.png}
 
         \caption{Dados atualizados com as incertezas}
         \label{fig:incert:dados}
@@ -39,36 +26,9 @@ Como exemplo para a aplicação de barras de incerteza, continuaremos com os mes
 
     \begin{figure}[htbp]
         \centering
-        \begin{subfigure}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{incert/4xer.png}
-
-            \caption{Incerteza em \texttt{X}}
-            \label{fig:incert:xer}
-        \end{subfigure}
-        ~
-        \begin{subfigure}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{incert/5yer.png}
-
-            \caption{Incerteza em \texttt{Y}}
-            \label{fig:incert:yer}
-        \end{subfigure}
+        \includegraphics[width=0.6\textwidth]{incert/3xyer.png}
         \caption{Mudando o tipo das novas colunas para relacionar com os valores das medidas}
         \label{fig:incert:tipos}
-    \end{figure}
-
-
-\subsection{Formatação das Barras de Incerteza}
-
-    As barras de incerteza também têm várias configurações de formatação relacionadas a elas, mas aqui só será alterado o tamanho do traço final da barra (em inglês, \textit{cap}) como exemplo na figura \ref{fig:incert:capsz}.
-
-    \begin{figure}[htbp]
-        \centering
-        \includegraphics[width=0.7\textwidth]{incert/6cap.png}
-
-        \caption{Dados atualizados com as incertezas}
-        \label{fig:incert:capsz}
     \end{figure}
 
 
@@ -78,24 +38,22 @@ Como exemplo para a aplicação de barras de incerteza, continuaremos com os mes
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{incert/preresultado.pdf}
+        \includegraphics[width=0.6\textwidth]{incert/preresultado.pdf}
 
-        \caption{Gráfico de corrrente por tensão com as incertezas de cada medida}
+        \caption{Gráfico de corrente por tensão com as incertezas de cada medida}
         \label{fig:incert:preresultado}
     \end{figure}
 
-    Entretanto, se for aplicada a formatação da seção \nameref{sec:reta} e a regressão linear, como na seção \nameref{sec:regres}, o resultado deveria ficar semelhante a figura \ref{fig:incert:resultado}.
+    Entretanto, se for aplicada a formatação da seção \nameref{sec:reta} e a regressão linear, como na seção \nameref{sec:regres}, o resultado deveria ficar semelhante a figura \ref{fig:incert:resultado}, cujos coeficientes são $B = 0.34 \pm 0.11$ e $A = 9.8 \pm 0.3$.
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{incert/resultado.pdf}
+        \includegraphics[width=0.6\textwidth]{incert/resultado.pdf}
 
         \caption{Gráfico formatado, com barras de incerteza e regressão linear}
         \label{fig:incert:resultado}
     \end{figure}
 
     \begin{nota}
-        Note que os coeficientes da regressão em \ref{fig:incert:resultado}, tanto os valores quanto as incertezas, são levemente diferentes da figura \ref{fig:regres:final}, até mesmo com dados numéricos idênticos. A diferença aqui se deve as incertezas dos dados, que agora estão sendo levadas em conta no cálculo da regressão.
-
-        Na verdade, apenas a incerteza em \texttt{Y} está sendo levada em conta. A regressão com as incertezas de \texttt{X} só estão presentes nas versões mais novas do \texttt{Origin}.
+        Note que os coeficientes $A$ e $B$ da regressão em \ref{fig:incert:resultado}, tanto em seus valores quanto nas suas incertezas, são levemente diferentes dos da figura \ref{fig:regres:coefs}, mesmo com os dados numéricos idênticos. A diferença aqui se deve as incertezas dos dados, que agora estão sendo levadas em conta no cálculo da regressão.
     \end{nota}

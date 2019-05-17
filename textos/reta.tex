@@ -1,19 +1,25 @@
-Nesta seção, será tomado como exemplo a relação de corrente e tensão em um resistor, dado pela teoria por (\ref{eq:resist}). São os mesmos dados da figura \ref{fig:basico:importado}, da seção \nameref{sec:basico}, que foram gerados por computador.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.35\textwidth]{reta/1dados.png}
+
+    \caption{Dados de corrente por tensão, com as coluna já configuradas}
+    \label{fig:reta:dados}
+\end{figure}
+
+Nesta seção, será tomado como exemplo a relação de corrente e tensão em um resistor, dado de forma teórica pela relação (\ref{eq:resist}). Por mais os dados usados aqui sejam os da figura \ref{fig:reta:dados}, essa parte de apresentação de dados é importante para todos tipo de análise, em especial, para dados coletados manualmente, como é o caso dos experimentos da disciplina de \texttt{F 329}.
 
 \begin{equacao} \label{eq:resist}
     I = \frac{1}{R} ~ V
 \end{equacao}
 
-Por mais que sejam esses os dados usados aqui, essa parte de apresentação de dados é importante para todos dados, em especial, quando coletados à mão, como é o caso dos experimentos da disciplina de \texttt{F 329}.
-
 
 \subsection{Dados Pontuais}
 
-    Normalmente, quando se trata de dados pontuais, é importante mostrar esses dados em alguma tabela e no gráfico também. O modo de se fazer isso no \texttt{Origin} é com a funcionalidade \texttt{Scatter} (figura \ref{fig:reta:scatter}).
+    Normalmente, quando se trata de dados pontuais, é importante mostrar esses dados em alguma tabela e no gráfico também. O modo de se fazer isso no \software é com a funcionalidade \texttt{Scatter} (figura \ref{fig:reta:scatter}).
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.7\textwidth]{reta/1scatter.png}
+        \includegraphics[width=0.6\textwidth]{reta/2scatter.png}
 
         \caption{\texttt{Scatter}}
         \label{fig:reta:scatter}
@@ -21,7 +27,7 @@ Por mais que sejam esses os dados usados aqui, essa parte de apresentação de d
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{reta/1linscatter.pdf}
+        \includegraphics[width=0.5\textwidth]{reta/1linscatter.pdf}
 
         \caption{Resultado do \texttt{Scatter}}
         \label{fig:reta:linscatter}
@@ -30,65 +36,76 @@ Por mais que sejam esses os dados usados aqui, essa parte de apresentação de d
 
 \subsection{Tratamento da Legenda}
 
-    O \texttt{Origin} gera uma legenda padrão para os elementos desenhados no gráfico. O ideal é alterá-las para serem mais informativas. As legendas também podem ser reposicionadas apenas arrastando-as.
+    O \software gera uma legenda padrão para os elementos desenhados no gráfico. O ideal é alterá-las para serem mais informativas. As legendas também podem ser reposicionadas apenas arrastando-as. Por padrão, o plano de fundo da legenda é transparente, mas é recomendável mudar para um plano de fundo preenchido em branco ou qualquer que seja a cor de fundo do gráfico.
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{reta/2legenda.png}
+        \includegraphics[width=0.5\textwidth]{reta/3legenda.png}
 
         \caption{Alterando o texto da legenda}
-        \label{fig:reta:logenda}
+        \label{fig:reta:legenda}
     \end{figure}
 
 
-\subsection{Marcadores de Ponto}
+\subsection{Formatação dos Eixo e do Título}
 
-    Os pontos de dados do \texttt{Scatter} são por padrão marcados com um quadrado preenchido. Isso pode ser alterado acessando as opções por qualquer um dos pontos no gráfico. Existem várias opções de formatação do marcador, incluindo desenho, tamanho e cor.
+    Diferente do \texttt{Origin}, o \software não ajusta nada nos texto do gráfico, então isso deve ser feito manualmente, como é visto nas figuras \ref{fig:reta:eixo} e \ref{fig:reta:titulo}.
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{reta/3marks.png}
+        \begin{subfigure}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{reta/4eixos.png}
 
-        \caption{Alterando os marcadores}
-        \label{fig:reta:marcadores}
+            \caption{Alterando dos nomes dos eixos}
+            \label{fig:reta:eixo}
+        \end{subfigure}
+        ~
+        \begin{subfigure}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{reta/4titulo.png}
+
+            \caption{Mudança do título}
+            \label{fig:reta:titulo}
+        \end{subfigure}
+        \caption{Opções dos textos principais do gráfico}
+        \label{fig:reta:textos}
     \end{figure}
-
-    No material, será usado marcadores circulares, preenchidos com preto e de tamanho 5.
 
 
 \subsection{Linhas de Grid}
 
-    Para ler melhor os eixos do gráfico, é possível colocar retas acompanhando os valores principais.
+    Para ler melhor os eixos do gráfico, é possível colocar linhas de \textit{grid} acompanhando os valores principais.
 
     \begin{figure}[htbp]
         \centering
-        \begin{subfigure}{0.25\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{reta/4eixos.png}
+        \includegraphics[width=0.55\textwidth]{reta/5gridopt.png}
 
-            \caption{Acesso às opções dos eixos}
-            \label{fig:reta:eixos}
+        \caption{Acesso as opções de formatação de linha de acompanhamento dos eixos}
+        \label{fig:reta:gridopt}
+    \end{figure}
+
+    No material, serão utilizadas linhas principais horizontais e verticais, que serão em tracejados em cinza escuro, sem linhas secundárias. Essas configurações podem e devem ser alteradas para cada gráfico, dependendo da e facilidade e da importância da leitura dos valores.
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{subfigure}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{reta/6grid.png}
+
+            \caption{Opções dos eixos (aba \texttt{Grid})}
+            \label{fig:reta:grid}
         \end{subfigure}
         ~
-        \begin{subfigure}{0.7\textwidth}
+        \begin{subfigure}{0.45\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{reta/5grid.png}
+            \includegraphics[width=\textwidth]{reta/6cor.png}
 
-            \caption{Opções dos eixos (aba \texttt{Grid Lines})}
-            \label{fig:reta:grid}
+            \caption{Mudança de cor da linha}
+            \label{fig:reta:gridcor}
         \end{subfigure}
         \caption{Opções de linhas de \textit{grid}}
         \label{fig:reta:opcoes_eixo}
-    \end{figure}
-
-    No material, será utilizado linhas horizontais e verticais. As linhas principais serão em cinza escuro em traços e as linhas secundárias em cinza claro com pontilhado. Essas configurações podem e devem ser alteradas para cada gráfico, dependendo da importância da leitura dos valores.
-
-    \begin{figure}[htbp]
-        \centering
-        \includegraphics[width=0.8\textwidth]{reta/6gridtipo.png}
-
-        \caption{Colocando e formatando as linha de acompanhamento dos eixos}
-        \label{fig:reta:gridtipo}
     \end{figure}
 
 
@@ -96,7 +113,7 @@ Por mais que sejam esses os dados usados aqui, essa parte de apresentação de d
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{reta/2gridlinscat.pdf}
+        \includegraphics[width=0.6\textwidth]{reta/2gridlinscat.pdf}
 
         \caption{Gráfico de exemplo dos valores de corrrente e de tensão}
         \label{fig:reta:gridlinscat}

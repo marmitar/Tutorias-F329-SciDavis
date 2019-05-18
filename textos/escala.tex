@@ -7,11 +7,11 @@ Várias vezes, no entanto, os dados não apresentam relação linear. Nesses cas
 Dentre as técnicas mais comuns, muitas envolvem a aplicação de logaritmos para linearizar alguma relação de potência de $x$, isto é, nos casos de $y \propto x^k$, ou alguma relação exponencial, $y \propto k^x$. Para esses casos, é comum a utilização de escala logarítmica na intenção de se observar melhor os dados, em que $f(x, y) = \log(y)$ e $g(x, y) = \log(x)$.
 
 
-\subsection{Gráfico Log-Log}
+\subsection{Gráfico Log-Log} \label{sec:escala:loglog}
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.6\textwidth]{escala/1dados.pdf}
+        \includegraphics[width=0.7\textwidth]{escala/1dados.pdf}
 
         \caption{Gráfico da relação da ponte de Wheatstone (\ref{eq:wheatstone})}
         \label{fig:escala:loglog:dados}
@@ -32,34 +32,34 @@ Dentre as técnicas mais comuns, muitas envolvem a aplicação de logaritmos par
 
     Portanto, podemos montar um gráfico \texttt{log-log} de $R_x$ por $R_d$, cujo coeficiente angular deveria resultar em $-1$.
 
-    \begin{lembrete}
-        Cuidado com o posicionamento dos dados na escala logarítmica. Normalmente quando se muda a escala, os ponto mudam de posição em suas novas representações no gráfico e apresentação dos dados pode ser prejudicada. Para atualizar essas posições, o método mais simples é permitir a mudança automática dos limites do gráfico (como na figura \ref{fig:escala:rescale}) e alterar alguma célula da tabela, servindo apenas um simples "copiar e colar" do valor que estava na célula.
-    \end{lembrete}
-
     \begin{figure}[htbp]
         \centering
-        \begin{subfigure}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{escala/2rescale.png}
-
-            \caption{Mudança automática dos limites do gráfico}
-            \label{fig:escala:rescale}
-        \end{subfigure}
-        ~
-        \begin{subfigure}{0.45\textwidth}
+        \begin{subfigure}{0.55\textwidth}
             \centering
             \includegraphics[width=\textwidth]{escala/3logscale.png}
 
-            \caption{Escala logarítmica de base 10}
+            \caption{Opções de escala (acessado como na figura \ref{fig:reta:gridopt})}
+            \label{fig:escala:rescale}
+        \end{subfigure}
+        ~
+        \begin{subfigure}{0.4\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{escala/2rescale.png}
+
+            \caption{Atualização dos limites da escala}
             \label{fig:escala:logscale}
         \end{subfigure}
-        \caption{Colocando a escala logarítmica}
+        \caption{Mudança para a escala logarítmica}
         \label{fig:escala:tutorial}
     \end{figure}
 
+    \begin{nota}
+        Para os gráficos com escala logarítmica, foram usadas linhas de \textit{grid} secundárias com um cinza mais claro para ajudar na visualização.
+    \end{nota}
+
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{escala/4loglog.pdf}
+        \includegraphics[width=0.7\textwidth]{escala/4loglog.pdf}
 
         \caption{Gráfico \texttt{log-log} dos dados da figura \ref{fig:escala:loglog:dados}}
         \label{fig:escala:loglog:resultado}
@@ -70,9 +70,9 @@ Dentre as técnicas mais comuns, muitas envolvem a aplicação de logaritmos par
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.6\textwidth]{escala/5dados.pdf}
+        \includegraphics[width=0.7\textwidth]{escala/5dados.pdf}
 
-        \caption{Gráfico da relação (\ref{eq:termistor}) do termistor}
+        \caption{Gráfico da relação do termistor (\ref{eq:termistor})}
         \label{fig:escala:semilog:dados}
     \end{figure}
 
@@ -89,32 +89,11 @@ Dentre as técnicas mais comuns, muitas envolvem a aplicação de logaritmos par
             &= \ln(A) + B ~ T^{-1}
     \end{align*}
 
-    Que pode ser usada em um gráfico \texttt{semi-log} de $R \times T^{-1}$, como na figura \ref{fig:escala:tutextra}.
+    Que pode ser usada em um gráfico \texttt{semi-log} de $R \times T^{-1}$, aplicando a escala logarítmica apenas no eixo da esquerda.
 
     \begin{figure}[htbp]
         \centering
-        \begin{subfigure}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{escala/6lnscale.png}
-
-            \caption{Escala logarítmica de base $e$}
-            \label{fig:escala:lnscale}
-        \end{subfigure}
-        ~
-        \begin{subfigure}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{escala/7expticks.png}
-
-            \caption{Marcadores de escala como expoentes de $e$}
-            \label{fig:escala:expticks}
-        \end{subfigure}
-        \caption{Ajustes para a escala \texttt{ln}}
-        \label{fig:escala:tutextra}
-    \end{figure}
-
-    \begin{figure}[htbp]
-        \centering
-        \includegraphics[width=0.8\textwidth]{escala/8semilog.pdf}
+        \includegraphics[width=0.7\textwidth]{escala/8semilog.pdf}
 
         \caption{Gráfico \texttt{semi-log} dos dados da figura \ref{fig:escala:semilog:dados}}
         \label{fig:escala:semilog:resultado}
@@ -123,13 +102,13 @@ Dentre as técnicas mais comuns, muitas envolvem a aplicação de logaritmos par
 
 \subsection{Regressão em Escala Logarítmica}
 
-    A regressão de uma curva de potência ou exponencial é possível com técnicas de regressão não-linear, só que essas técnicas não cabem no escopo dessa matéria. Uma outra opção muito utilizada é encontrar uma linearização, como na equação (\ref{eq:linearizacao}), e, com a nova relação linear de $f(x, y) \times g(x, y)$, aplicar a regressão linear como da seção \nameref{sec:regres}. O único detalhe é que é preciso encontrar os valores de $f(x, y)$ e $g(x, y)$ e suas incertezas para cada par $(x, y)$ dos dados e só com esses valores pode-se encontrar os coeficientes $a$ e $b$, como foi feito na figura \ref{fig:escala:regres}.
+    A regressão de uma curva de potência ou exponencial é possível com técnicas de regressão não-linear, só que essas técnicas não cabem no escopo dessa matéria. Uma outra opção muito utilizada é encontrar uma linearização, como na equação (\ref{eq:linearizacao}), e, com a nova relação linear de $f(x, y) \times g(x, y)$, aplicar a regressão linear como da seção \nameref{sec:regres}. O único detalhe é que é preciso encontrar os valores de $f(x, y)$ e $g(x, y)$ e suas incertezas para cada par $(x, y)$ dos dados e só com esses valores pode-se encontrar os coeficientes $a$ e $b$, como foi feito na figura \ref{fig:escala:regres}, com os dados da seção \nameref{sec:escala:loglog}.
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{escala/9logreg.pdf}
+        \includegraphics[width=0.7\textwidth]{escala/9logreg.pdf}
 
-        \caption{Gráfico da regressão da relação (\ref{eq:wheatstone}). Isso seviria para mostrar que $b \approx -1$, por exemplo.}
+        \caption{Gráfico da regressão da relação (\ref{eq:wheatstone}). Nesse caso, $b = -1.03 \pm 0.05$, o que seviria para mostrar que $b \approx -1$, por exemplo.}
         \label{fig:escala:regres}
     \end{figure}
 

@@ -6,11 +6,11 @@ Um exemplo de equação característica é a equação (\ref{eq:termistor}), do 
 
     Para os outros caso, no entanto, é preciso linearizar a equação, como feito na seção \nameref{sec:escala}, encontrar os coeficientes da linearização e transformar para os coeficientes da equação inicial.
 
-    No caso dos dados do termistor, a regressão é aplicada como na figura \ref{fig:caract:regres}. Logo, os coeficientes se tornam $A = \exp(-7.07097) \approxeq 0.00084941$ e $B = 4632.762$.
+    No caso dos dados do termistor, a regressão é aplicada como na figura \ref{fig:caract:regres}. Logo, os coeficientes se tornam $A = \exp(-7.095) \approxeq 0.0008293$ e $B = 4643.029$.
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{caract/1regres.pdf}
+        \includegraphics[width=0.6\textwidth]{caract/1regres.pdf}
 
         \caption{Gráfico da linearização da equação (\ref{eq:termistor})}
         \label{fig:caract:regres}
@@ -23,7 +23,7 @@ Um exemplo de equação característica é a equação (\ref{eq:termistor}), do 
 
     \begin{figure}[htbp]
         \centering
-        \begin{subfigure}{0.32\textwidth}
+        \begin{subfigure}{0.4\textwidth}
             \centering
             \includegraphics[width=\textwidth]{caract/2insert.png}
 
@@ -31,11 +31,11 @@ Um exemplo de equação característica é a equação (\ref{eq:termistor}), do 
             \label{fig:caract:novo}
         \end{subfigure}
         ~
-        \begin{subfigure}{0.63\textwidth}
+        \begin{subfigure}{0.55\textwidth}
             \centering
             \includegraphics[width=\textwidth]{caract/4funcao.png}
 
-            \caption{Colocando a função $R = 0.00084941 ~ \exp(4632.762/T)$}
+            \caption{Colocando a função $R = 0.0008293 ~ \exp(4643.029/T)$}
             \label{fig:caract:funcao}
         \end{subfigure}
         \caption{Desenhando uma função no gráfico}
@@ -55,21 +55,13 @@ Um exemplo de equação característica é a equação (\ref{eq:termistor}), do 
         \label{fig:caract:cor}
     \end{figure}
 
-    Além da cor, é importante lembrar de tratar da curva na legenda do gráfico, caso isso não tenha sido feito automaticamente, que pode ser feito pelas propriedades da legenda. Normalmente, a descrição da curva pode ser dada também pela sua forma algébrica.
-
-    \begin{figure}[htbp]
-        \centering
-        \includegraphics[width=0.7\textwidth]{caract/6leg.png}
-        \caption{Atualizando a legenda com a nova curva}
-        \label{fig:caract:legenda}
-    \end{figure}
-
+    Além da cor, é importante lembrar de tratar da curva na legenda do gráfico. Para isso, basta escolher uma legenda mais descritiva para a curva.
 
 \subsection{Resultado}
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{caract/8final.pdf}
+        \includegraphics[width=0.6\textwidth]{caract/8final.pdf}
 
         \caption{Gráfico com a curva característica do termistor}
         \label{fig:caract:final}

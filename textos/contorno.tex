@@ -5,7 +5,7 @@ Serão usados, como exemplo, dados semelhantes aos do experimento sobre potencia
 
 \subsection{Limitações do SciDavis}
 
-    Com o \software, as opções para fazer curvas de nível são bem mais limitadas do que com outras ferramentas e os resultados costumam ter muitos problemas de formatação. Observe na figura \ref{fig:contorno:limitado} como é difícil a leitura dos níveis com as cores e como os níveis não fazem muito sentido. Além disso, esse modelo de gráfico serve apenas para pontos igualmente espaçados de $x$ e $y$.
+    Com o \software, as opções para fazer curvas de nível são bem mais limitadas do que com outras ferramentas e os resultados costumam ter muitos problemas de formatação. Observe na figura \ref{fig:contorno:limitado} como é difícil a leitura dos níveis com as cores e como as curvas de nível não fazem muito sentido. Além disso, esse modelo de gráfico serve apenas para pontos igualmente espaçados de $x$ e $y$.
 
     \begin{figure}[htbp]
         \centering
@@ -18,7 +18,7 @@ Serão usados, como exemplo, dados semelhantes aos do experimento sobre potencia
 
 \subsection{Simulando Curvas de Nível}
 
-    Apesar de tudo isso, é possível simular curvas de nível com um gráfico de múltiplas variáveis. Para tanto, é preciso que os dados sejam coletados seguindo valores fixos de $x$ e,$z$ que significa medir as equipotenciais em valores específicos de $x$ no caso das medidas de potencial na cuba.
+    Apesar de tudo isso, é possível simular curvas de nível com um gráfico de múltiplas variáveis. Para tanto, é preciso que os dados sejam coletados seguindo valores fixos de $z$ que significa medir as equipotenciais em valores específicos de $V$ no caso das medidas de potencial na cuba.
 
     \begin{figure}[htbp]
         \centering
@@ -28,12 +28,12 @@ Serão usados, como exemplo, dados semelhantes aos do experimento sobre potencia
         \label{fig:contorno:dados}
     \end{figure}
 
-    No \software, basta separar os valores de cada $z$ diferente em colunas próprias de $y$. A tabela deve ficar algo parecido com a da figura \ref{fig:contorno:dados}. Com isso, basta aplicar o mesmo processo de montagem do gráficoda seção \nameref{sec:multiv:juntos}.
+    No \software, basta separar os valores de cada $z$ diferente em colunas próprias de $y$. A tabela deve ficar algo parecido com a da figura \ref{fig:contorno:dados}. Com isso, basta aplicar o mesmo processo de montagem do gráfico da seção \nameref{sec:multiv:juntos}.
 
 
 \subsection{Opções de Formatação}
 
-    Por padrão, o \software coloca cores variadas para cada nível, mas é mais recomendado seguir tons variados de uma mesma cor. Para este exemplo será seguido um padrão de cores monocromáticas. Além disso, a grossura das linhas (\texttt{Line width}) foi alterada para o valor 2.
+    Por padrão, o \software escolhe cores variadas para cada nível, mas é mais recomendado seguir tons variados de uma mesma cor. Para este exemplo será seguido um padrão de cores monocromáticas. Além disso, a grossura das linhas (\texttt{Line width}) foi alterada para o valor 2.
 
     \begin{figure}[htbp]
         \centering

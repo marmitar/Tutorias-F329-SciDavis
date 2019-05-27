@@ -2,80 +2,57 @@ Curvas de nível servem para representar dados tridimensionais em um plano. As t
 
 Serão usados, como exemplo, dados semelhantes aos do experimento sobre potencial elétrico entre barras de cobre em uma solução condutiva. Nesse caso, as variáveis dependentes são as distâncias $x$ e $y$ no plano e a variável dependente é o potencial $V$ de cada ponto.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.4\textwidth]{contorno/1dados.png}
 
-    \caption{Montagem dos dados de potencial na tabela do \texttt{Origin}}
-    \label{fig:contorno:dados}
-\end{figure}
+\subsection{Limitações do SciDavis}
 
-
-\subsection{Iniciando o Gráfico}
+    Com o \software, as opções para fazer curvas de nível são bem mais limitadas do que com outras ferramentas e os resultados costumam ter muitos problemas de formatação. Observe na figura \ref{fig:contorno:limitado} como é difícil a leitura dos níveis com as cores e como os níveis não fazem muito sentido. Além disso, esse modelo de gráfico serve apenas para pontos igualmente espaçados de $x$ e $y$.
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{contorno/2plot.png}
+        \includegraphics[width=0.6\textwidth]{contorno/limitado.png}
 
-        \caption{Desenhando o gráfico de linhas de contorno}
-        \label{fig:contorno:plot}
+        \caption{Exemplos de gráfico de curvas de nível do \software}
+        \label{fig:contorno:limitado}
     \end{figure}
+
+
+\subsection{Simulando Curvas de Nível}
+
+    Apesar de tudo isso, é possível simular curvas de nível com um gráfico de múltiplas variáveis. Para tanto, é preciso que os dados sejam coletados seguindo valores fixos de $x$ e,$z$ que significa medir as equipotenciais em valores específicos de $x$ no caso das medidas de potencial na cuba.
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.6\textwidth]{contorno/1dados.png}
+
+        \caption{Montagem dos dados de posições para cada potencial}
+        \label{fig:contorno:dados}
+    \end{figure}
+
+    No \software, basta separar os valores de cada $z$ diferente em colunas próprias de $y$. A tabela deve ficar algo parecido com a da figura \ref{fig:contorno:dados}. Com isso, basta aplicar o mesmo processo de montagem do gráficoda seção \nameref{sec:multiv:juntos}.
+
 
 \subsection{Opções de Formatação}
 
-    \begin{figure}[H]
+    Por padrão, o \software coloca cores variadas para cada nível, mas é mais recomendado seguir tons variados de uma mesma cor. Para este exemplo será seguido um padrão de cores monocromáticas. Além disso, a grossura das linhas (\texttt{Line width}) foi alterada para o valor 2.
+
+    \begin{figure}[htbp]
         \centering
-        \begin{subfigure}{0.7\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{contorno/4sufixo.png}
+        \includegraphics[width=0.6\textwidth]{contorno/2cor.png}
 
-            \caption{Adição de um sufixo nos dados em $z$}
-            \label{fig:contorno:sufixo}
-        \end{subfigure}
-        ~
-        \begin{subfigure}{0.7\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{contorno/6linha.png}
-
-            \caption{Mudança do estilo das linhas de separação dos níveis}
-            \label{fig:contorno:linhas}
-        \end{subfigure}
-        \caption{Opções do gráfico de curvas de nível}
-        \label{fig:contorno:opcoes}
+        \caption{Principais opções de formatação}
+        \label{fig:contorno:cor}
     \end{figure}
 
     \begin{lembrete}
-        É importante a adição de sufixos com a unidade do valor medido (figura \ref{fig:contorno:sufixo}).
+        É importante a adição de sufixos com a unidade do valor medido na legenda.
     \end{lembrete}
 
-    Para as paletas de cores existem muitas opções e vale mais a pena testar qual paleta funciona melhor com os seus dados. A caixa de opções é acessada como na figura \ref{fig:contorno:paleta}. A caixa da figura \ref{fig:contorno:escala} é acessada com um clique duplo na caixa com os níveis do eixo $z$.
-
-    \begin{figure}[H]
-        \centering
-        \begin{subfigure}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{contorno/3paleta.png}
-
-            \caption{Mudança da paleta de cores}
-            \label{fig:contorno:paleta}
-        \end{subfigure}
-        ~
-        \begin{subfigure}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{contorno/5bg.png}
-
-            \caption{Opções da escala de níveis}
-            \label{fig:contorno:escala}
-        \end{subfigure}
-        \caption{Mais opções de formatação}
-        \label{fig:contorno:extra}
-    \end{figure}
 
 \subsection{Resultado}
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.9\textwidth]{contorno/resultado.pdf}
+        \includegraphics[width=0.6\textwidth]{contorno/resultado.pdf}
 
         \caption{Deformação das equipotenciais gerada pela adição de uma ponta}
         \label{fig:contorno:final}

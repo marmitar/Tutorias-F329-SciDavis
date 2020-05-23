@@ -1,0 +1,18 @@
+image: $CI_REGISTRY/f329-tutoriais/docker:latest
+
+stages:
+  - build
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+
+build document:
+  stage: build
+  script:
+    - latexmk -pdf main.tex -shell-escape
+    - mv main.pdf scidavis.pdf
+  artifacts:
+    name: document
+    paths:
+      - scidavis.pdf
